@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header {
+    background: #272636;
+    overflow: hidden;
+    padding:10px;
+
+}
+
+.content {
+    background: #ffffff;
+    height: 70%;
+}
+
+.footer {
+    background: #272636;
+    height: 15%;
+}
+
+.head_left {
+
+    float: left;
+    display: inline-block;
+
+}
+
+.header ul {
+    list-style: none;
+    float: right;
+    height: 100%;
+    margin-left: 20px;
+
+}
+
+.header ul li{
+    height: 100%;
+    display: inline-block;
+
+}
+
+
+
+.header ul li a{
+    float: right;
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline-block;
+    line-height: 50px;
+    height: 50px;
+}
+
+.login{
+    margin: 20px auto;
+    width: 20%;
+    padding: 30px;
+    border: 1px solid #ccc;
+}
+.login li{
+    margin-bottom: 10px;
+}
+
+a:link {color:#ffffff;}    /* unvisited link */
+a:hover {color:#eb4f38;}   /* mouse over link */
+
+
+.common_button{
+  border: 1px solid #ccc;;
+    padding: 4px 10px;
+}
+
