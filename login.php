@@ -43,7 +43,7 @@
 <div class="content"><!--内容区域开始-->
 
     <div class="login">
-        <form action="./admin/doLogin.php" method="post">
+        <form action="app/Login.php" method="post">
             <ul>
                 <li >用户名</li>
                 <li ><input type="text" name="user_name" placeholder="请输入用户名"></li>

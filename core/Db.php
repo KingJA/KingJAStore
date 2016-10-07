@@ -15,11 +15,6 @@ class Db
 
     private function __construct()
     {
-        self::$conn = new mysqli('bdm243712174.my3w.com', 'bdm243712174', 'wzy1gqqbuu', 'bdm243712174_db');
-        self::$conn->set_charset("utf8");
-        if (!self::$conn) {
-            die("connect_error:" . self::$conn . mysqli_connect_error());
-        }
     }
 
     public static function getInstance()
@@ -31,14 +26,25 @@ class Db
         return self::$Db;
     }
 
-    public static function insert($table,$array)
+    public static function connect()
     {
-        $keys=join(",",array_keys($array));
-        $vals="'".join("','",array_values($array))."'";
-        $sql="insert {$table}($keys) values({$vals})";
-        print_r($sql);
-        $result =self::$conn->query($sql);
-        
+        self::$conn = new mysqli('127.0.0.1', 'root', 'root', 'kingja');
+        self::$conn->set_charset("utf8");
+        if (!self::$conn) {
+            die("connect_error:" . self::$conn . mysqli_connect_error());
+        }
+        return self::$conn;
+    }
+
+
+    /*======================================================================================*/
+
+    public static function insert($table, $array)
+    {
+        $keys = join(",", array_keys($array));
+        $vals = "'" . join("','", array_values($array)) . "'";
+        $sql = "insert {$table}($keys) values({$vals})";
+        $result = self::$conn->query($sql);
         return $result;
 
     }
@@ -71,33 +77,4 @@ class Db
 
 }
 
-//
-//$con = Db::getInstance()->conn();
-//$result = $con->query("select * from t_login");
-//
-
-//while($row = $result->fetch_assoc())
-//{
-//    echo $row['name'] . " " . $row['password'];
-//    echo "<br>";
-//}
-//while($row = $result->fetch_row())
-//{
-//    echo  $row[0] . " " .$row[1] . " " . $row[2];
-//    echo "<br>";
-//}
-//while($row = $result->fetch_array())
-//{
-////    echo $row['name'] . " " . $row['password'];
-//    echo $row[1] . " " . $row[2];
-//    echo "<br>";
-//}
-//while($row = $result->fetch_object())
-//{
-//    $rows[]=$row;
-//}
-//
-//if ($rows) {
-//    Response::getJson(100,"数据获取成功",$rows);
-//}
 

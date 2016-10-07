@@ -11,15 +11,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录界面</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="./admin/css/main.css">
+    <link rel="stylesheet" href="./admin/css/reset.css">
 </head>
 <body>
 <div class="header"><!--页头开始-->
 
     <div class="head_left">
-        <img src="imgs/logo.png" alt="Logo" id="logo">
+        <img src="./admin/imgs/logo.png" alt="Logo" id="logo">
         <ul>
             <li class="float_a"><a href="#">登录</a></li>
             <li class="float_a"><a href="#">注册</a></li>
@@ -34,21 +34,18 @@
         <li class="float_a"><a href="#">关于我们</a></li>
         <li class="float_a"><a href="#">关于我们</a></li>
 
-    </ul>3333333333
+    </ul>
+</div>
+
 
 </div><!--页头结束-->
 
 <div class="content"><!--内容区域开始-->
 
     <div class="login">
-        <form action="doLogin.php" method="post">
+        <form action="app/Register.php" method="post">
             <ul>
                 <li >用户名</li>
-                
-                
-                
-
- 
                 <li ><input type="text" name="user_name" placeholder="请输入用户名"></li>
                 <li >密码</li>
                 <li ><input type="password" name="user_password" placeholder=""></li>
